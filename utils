@@ -1,0 +1,4 @@
+# Any additional helper functions, such as text preprocessing or formatting, can go here.
+
+def format_message(message):
+    return message.strip().capitalize()
