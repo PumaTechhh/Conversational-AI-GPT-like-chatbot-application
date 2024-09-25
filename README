@@ -1,0 +1,14 @@
+# Conversational AI Chatbot
+
+This repository contains a Conversational AI chatbot built using GPT-like language models. The chatbot provides intelligent responses based on natural language input. You can customize this application to use APIs like OpenAI's GPT models or other NLP frameworks.
+
+## Features:
+- Text-based conversational interface
+- Chatbot responds with context-aware replies
+- API integration for GPT-like models
+- Interactive web interface for demo purposes
+
+## Requirements:
+- Python 3.x
+- Flask
+- OpenAI API (or another language model API)
