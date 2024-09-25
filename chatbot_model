@@ -1,0 +1,23 @@
+import openai
+import yaml
+
+# Load the configuration file
+with open('config/config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+
+openai.api_key = config['api']['openai_api_key']
+
+def get_chatbot_response(message):
+    try:
+        response = openai.ChatCompletion.create(
+            model=config['api']['model'],
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": message}
+            ],
+            max_tokens=config['api']['max_tokens'],
+            temperature=config['api']['temperature']
+        )
+        return response.choices[0].message['content']
+    except Exception as e:
+        return f"Error: {str(e)}"
